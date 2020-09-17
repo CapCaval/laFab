@@ -1,0 +1,12 @@
+@startuml
+lapp ..> CommandExecutor
+lapp ..> CommandSeeker
+lapp ..> StringCommand
+CommandExecutor ..> StringCommand
+CommandExecutor ..> Convertor
+Convertor..> ConvertorError
+CommandExecutor ..> CommandRepo
+CommandSeeker ..> CommandRepo
+CommandRepo..>StringCommand
+CommandSeeker ..> CommandSeekerError
+@enduml
